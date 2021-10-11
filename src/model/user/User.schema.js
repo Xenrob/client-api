@@ -33,6 +33,9 @@ const UserSchema = new Schema({
     }
 });
 
+
+//"User is the database table name"
+//this will create a database table name User in crm_ticket_system database
 module.exports = {
     UserSchema: mongoose.model("User", UserSchema)
 }

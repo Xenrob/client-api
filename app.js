@@ -9,7 +9,7 @@ const port = process.env.PORT || 3001;
 
 
 //API security
-app.use(helmet());
+//app.use(helmet());
 
 //handle CORS error
 app.use(cors());
@@ -17,6 +17,7 @@ app.use(cors());
 //MongoDB Connection Setup
 const mongoose = require('mongoose');
 
+//created connection to the database
 mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -24,6 +25,8 @@ mongoose.connect(process.env.MONGO_URL, {
         //useCreateIndex: true
 });
 
+//When not in production, check if connection is connected to mongoose
+//and give error message if not connected
 if (process.env.NODE_ENV !== "production") {
 
     const mDb = mongoose.connection;

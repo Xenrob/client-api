@@ -1,0 +1,24 @@
+### User sign up endpoint
+
+Post http://localhost:3001/v1/user
+Content-Type: application/json
+
+{
+    "name" : "Joel Robert",
+    "company" : "Vodafone Vanuatu",
+    "address" : "ITS, Independence Park",
+    "phone" : "+6787400175",
+    "email" : "jxn@gmail.com",
+    "password" : "admin666"
+    
+}
+
+### User sign in endpoint
+
+Post http://localhost:3001/v1/user/login
+Content-Type: application/json
+
+{
+    "email" : "jxn@gmail.com",
+    "password" : "admin666"
+}
